@@ -38,7 +38,7 @@ export default function Sale() {
            <div>
             
              <div className={styles.li_div_main}>
-            Bill No
+               <span className='m-3'>Bill No</span>
             <div className={styles.li_inner_div}>
               <CustomInput width={100}/>
             </div>
@@ -52,50 +52,51 @@ export default function Sale() {
               <CustomInput width={100} placeholder={'time'}/>
             </div>
 
-            Client Type
+            <span className='m-3'>Client Type</span>
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
-            Client Name
+            <span className='m-3'>Client Name</span>
+           
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
           </div>
   
           <div className={styles.li_div_main}>
-            Code
+          <span className='m-3'>Code</span>
+            <div className={styles.li_inner_div}>
+              <CustomInput />
+            </div>
+
+            <span className='m-3'>Name</span>
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
   
-            Name
+            <span className='m-3'>Bonus</span>
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
   
-            Bonus
+            <span className='m-3'>Qty</span>
+            <div className={styles.li_inner_div}>
+              <CustomInput />
+            </div>
+
+            <span className='m-3'>Disc%</span>
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
   
-            Qty
-            <div className={styles.li_inner_div}>
-              <CustomInput />
-            </div>
-  
-            Disc%
-            <div className={styles.li_inner_div}>
-              <CustomInput />
-            </div>
-  
-            Up
+            <span className='m-3'>Up</span>
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
           </div>
        
           <div className={styles.li_div_main}>
-
+  
             <div 
              className={styles.li_inner_div}>
               <CustomInput />
