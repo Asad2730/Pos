@@ -1,4 +1,5 @@
 import React from 'react'
+import { primary_color } from '../../utils/colors';
 
 
 
@@ -10,8 +11,14 @@ function TableFields({tableheaders,tableRows}) {
                   <tr className="divide-x divide-gray-200">
                    {
                     tableheaders.map((i)=>(
-                    <th scope="col" className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                        {i}
+                    <th scope="col"
+                      style={{
+                        backgroundColor:primary_color 
+                      }}
+                      className="py-3.5 pl-4 pr-4 text-left text-sm  font-semibold sm:pl-0">
+                        <span className=' text-white m-4'>
+                           {i} 
+                        </span>
                     </th>    
                     ))
                    }           
@@ -21,11 +28,25 @@ function TableFields({tableheaders,tableRows}) {
                   {tableRows.map((person) => (
                     <tr key={person.email} className="divide-x divide-gray-200">
                       <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-0">
-                        {person.name}
+                      <span className=' m-4'>
+                         {person.name}
+                      </span>
                       </td>
-                      <td className="whitespace-nowrap p-4 text-sm text-gray-500">{person.title}</td>
-                      <td className="whitespace-nowrap p-4 text-sm text-gray-500">{person.email}</td>
-                      <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-0">{person.role}</td>
+                      <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                        <span className=' m-4'>
+                         {person.title}
+                        </span>
+                        </td>
+                      <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                      <span className=' m-4'> 
+                      {person.email}
+                      </span>       
+                        </td>
+                      <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-0">
+                      <span className=' m-4'>
+                      {person.role}
+                      </span>
+                        </td>
                     </tr>
                   ))}
                 </tbody>

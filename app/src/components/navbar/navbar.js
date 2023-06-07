@@ -1,17 +1,18 @@
 import { Disclosure } from '@headlessui/react'
+import { primary_color } from '../../utils/colors';
 
 const navigation = [
-    { name: "Sale", to: "/hodhome", current: false },
-    { name: "Purchase", to: "/feedback", current: false },
-    { name: "Stock", to: "/HodPlans",  current: false },
-    { name: "Calculator", to: "/users",  current: false },
-    { name: "Set Default Printer", to: "/taskhistoryHod",  current: false },
-    { name: "Logout", to: "/taskhistoryHod",  current: false },
+    { name: "Sale", to: "/sale", current: false },
+    { name: "Purchase", to: "/purchase", current: false },
+    { name: "Stock", to: "/stock",  current: false },
+    { name: "Calculator", to: "/calculator",  current: false },
+    { name: "Set Default Printer", to: "/printer",  current: false },
+    { name: "Logout", to: "/login",  current: false },
   ];
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" style={{backgroundColor:primary_color}} className="bg-white shadow">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -23,7 +24,7 @@ export default function NavBar() {
                   {
                     navigation.map((i)=>(                      
                   <a
-                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-gray-300 hover:text-gray-700"
                   >
                    {i.name}
                   </a>

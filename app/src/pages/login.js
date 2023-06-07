@@ -1,8 +1,23 @@
+import { useState } from "react";
 import CustomButton from "../components/ui/button";
 import CustomInput from "../components/ui/input";
 import CustomText from "../components/ui/text";
 
+
 export default function Login() {
+   
+  const [formValues, setFormValues] = useState({
+   name:'',
+   password:'',
+  });
+  
+  const submit = ()=>{
+    const isFormValid = formValues.name !== '' && formValues.password !== '';
+    if(isFormValid){
+      console.log(formValues.name,formValues.password);
+    }
+  }
+
     return (
       <>
         <div className="flex min-h-screen flex-1">
@@ -22,25 +37,31 @@ export default function Login() {
 
             <div className="mt-10">
               <div>
-                <form action="#" method="POST" className="space-y-6">
+                <form  className="space-y-6">
                   <div>
-                    <CustomText label={'Email address'}/>
+                    <CustomText label={'User Name'}/>
                     <div className="mt-2">
-                      <CustomInput 
-                      placeholder={'email'} 
-                      type={'email'}
-                      required={true}        
-                      />
+                    <CustomInput 
+                      placeholder={'your name'} 
+                      type={'text'}
+                      required={true}
+                      onChange={setFormValues}
+                      value={formValues.name}  
+                      field={'name'}                 
+                    />
                     </div>
                   </div>
 
                   <div>
                     <CustomText label={'Password'}/>
                     <div className="mt-2">
-                    <CustomInput 
-                      placeholder={'password'} 
-                      type={'password'}
-                      required={true}                    
+                      <CustomInput 
+                       placeholder={'your password'} 
+                       type={'password'}
+                       required={true}
+                       onChange={setFormValues} 
+                       value={formValues.password}
+                       field={'password'}  
                       />
                     </div>
                   </div>                 
@@ -48,6 +69,7 @@ export default function Login() {
                   <div>
                    <CustomButton 
                      label={'Login'}
+                     onClick={submit}
                    />
                   </div>
                 </form>
