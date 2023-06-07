@@ -11,17 +11,31 @@ import { BsSendCheck } from "react-icons/bs";
 
 
 const tr = [
-    { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-    { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-    { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-    { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },   
+    { code: '1', ProductName: 'lindsay.walton@example.com', bonus: 'Member',
+      qty:'1', batch:'111',expiry:'07/06/2023',d:'element',disc:'10',price:'100',amount:'90'
+    },
+    { code: '2', ProductName: 'lindsay.walton@example.com', bonus: 'Member',
+    qty:'1', batch:'111',expiry:'07/06/2023',d:'element',disc:'10',price:'100',amount:'90'
+  },
+  { code: '3', ProductName: 'lindsay.walton@example.com', bonus: 'Member',
+  qty:'1', batch:'111',expiry:'07/06/2023',d:'element',disc:'10',price:'100',amount:'90'
+},
+{ code: '4', ProductName: 'lindsay.walton@example.com', bonus: 'Member',
+qty:'1', batch:'111',expiry:'07/06/2023',d:'element',disc:'10',price:'100',amount:'90'
+},
   ]
   
   const th=[
-    'Name',
-    'Title',
-     'Email',
-     'Role'
+    'Code',
+    'Product Name',
+     'Bonus',
+     'Qty',
+     'Batch#',
+     'Expiry Date',
+     'D%',
+     'Disc',
+     'Price',
+     'Amount'
   ];
 
 
