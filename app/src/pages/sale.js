@@ -291,7 +291,7 @@ export default function Sale() {
 const styles = {
   ul:'grid grid-cols-1 gap-6 m-4 sm:grid-cols-2 lg:grid-cols-3',
   li:'col-span-2 divide-y rounded-lg',
-  li_div_main:'-mt-px flex divide-x m-4',
+  li_div_main:'-mt-px flex  divide-x m-4',
   li_inner_div:'flex w-0 flex-1 m-1',
   footer_row:'grid grid-rows-5 grid-flow-col gap-4',
   footer_col:'grid grid-cols-4 gap-4'
