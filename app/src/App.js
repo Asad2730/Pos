@@ -1,5 +1,5 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
  import NavBar from './components/navbar/navbar';
-import Table from './components/table/table';
 import './index.css'
 import Login from './pages/login';
 import Sale from './pages/sale';
@@ -7,7 +7,14 @@ import Sale from './pages/sale';
 function App() {
   return (
    <>
-    <Sale/>
+     <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login/>}/>
+          <Route element={<NavBar/>}>
+          <Route path='/sale' element={<Sale/>}/>  
+          </Route>
+        </Routes>
+     </BrowserRouter>
    </>
   );
 }

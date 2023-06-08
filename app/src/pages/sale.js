@@ -39,12 +39,13 @@ qty:'1', batch:'111',expiry:'07/06/2023',d:'element',disc:'10',price:'100',amoun
   ];
 
 
-const iconSize = 50;
+const iconSize = 40;
 
 export default function Sale() {
   return (
-    <div style={{ backgroundColor: secondary_color,height: '100vh', width: '100vw' }}>
-      <NavBar />
+    <div 
+    style={{ backgroundColor: secondary_color,height: '100vh', width: '100vw' }}
+    >
       <ul role="list" 
         className={styles.ul}>
           
@@ -214,21 +215,21 @@ export default function Sale() {
   <div style={{ backgroundColor: primary_color, width: '100vw', overflowX: 'auto' }}>
 
   <div className="flex m-4">
-    <div className="grid grid-cols-5 gap-4">
+    <div className="grid grid-cols-5 gap-6">
       {/* Row 1 */}
       <div className="flex flex-row">
       <span className='text-white'>No of item</span>
         <CustomInput/>
       </div>
-      <div className="flex flex-row ">
+      <div className="flex flex-row">
         <span className='text-white'> Total Qty </span>
         <CustomInput/>
       </div>
-      <div className="flex flex-row ">
+      <div className="flex flex-row">
         <span className='text-white'> Add amount </span>
         <CustomInput/>
       </div>
-      <div className="flex flex-row ">
+      <div className="flex flex-row">
         <span className='text-white'>  Total amount  </span>
         <CustomInput/>
       </div>
@@ -237,48 +238,48 @@ export default function Sale() {
       </div>
 
       {/* Row 2 */}
-      <div className="flex flex-row ">
-      <span className='text-white'> Total items</span>
+      <div className="flex flex-row">
+      <span className='text-white mb-4 mt-6'> Total items</span>
        <CustomInput/>
       </div>
       <div className="flex flex-row ">
-      <span className='text-white'>  Item disc</span>
+      <span className='text-white mb-4 mt-6'>  Item disc</span>
         <CustomInput/>
       </div>
       <div className="flex flex-row ">
-      <span className='text-white'>  Previous balance </span>
+      <span className='text-white mb-4 mt-6'>  Previous bal </span>
        <CustomInput/>
       </div>
       <div className="flex flex-row ">
-      <span className='text-white'>  Paid amount </span>
+      <span className='text-white mb-4 mt-6'>  Paid amount </span>
          <CustomInput/>
       </div>
       <div className="flex flex-col">
       <span className='text-white'>  
            <div>    
-             000
+            <b className='text-6xl'>000</b>
           </div>
           <div>
-             Items
+          <b className='text-2xl m-4'>Items</b>
           </div>
           </span>   
       </div>
 
       {/* Row 3 */}
       <div className="flex flex-row ">
-        <span className='text-white'> Total bonus  </span>
+        <span className='text-white mr-2'> Total bonus  </span>
         <CustomInput/>
       </div>
       <div className="flex flex-row  ">
-         <span className='text-white'> Disc By% </span>
+         <span className='text-white mr-2'> Disc By% </span>
         <CustomInput/>
       </div>
       <div className="flex flex-row ">
-         <span className='text-white'> Disc By LS </span>
+         <span className='text-white mr-2'> Disc By LS </span>
           <CustomInput/>
       </div>
       <div className="flex flex-row">
-        <span className='text-white'> Balance </span>
+        <span className='text-white mr-2'> Balance </span>
          <CustomInput/>
       </div>
       <div className="flex flex-row">  
@@ -299,8 +300,8 @@ export default function Sale() {
 
 
 const styles = {
-  ul:'grid grid-cols-1 gap-6 m-4 sm:grid-cols-2 lg:grid-cols-3',
-  li:'col-span-2 divide-y rounded-lg',
+  ul:'grid grid-cols-1 gap-6 m-4 sm:grid-cols-2 lg:grid-cols-3 ',
+  li:'col-span-2 divide-y rounded-lg mt-6',
   li_div_main:'-mt-px flex  divide-x m-4',
   li_inner_div:'flex w-0 flex-1 m-1',
   li2_inner_div:'m-4',

@@ -2,10 +2,12 @@ import { useState } from "react";
 import CustomButton from "../components/ui/button";
 import CustomInput from "../components/ui/input";
 import CustomText from "../components/ui/text";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Login() {
-   
+  
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
    name:'',
    password:'',
@@ -15,6 +17,7 @@ export default function Login() {
     const isFormValid = formValues.name !== '' && formValues.password !== '';
     if(isFormValid){
       console.log(formValues.name,formValues.password);
+      navigate('/sale')
     }
   }
 
