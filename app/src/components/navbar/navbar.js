@@ -17,7 +17,7 @@ export default function NavBar() {
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 ">
+            <div className="relative flex h-16">
             
               <div className="flex flex-1">
               
