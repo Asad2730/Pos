@@ -39,6 +39,7 @@ qty:'1', batch:'111',expiry:'07/06/2023',d:'element',disc:'10',price:'100',amoun
   ];
 
 
+const iconSize = 50;
 
 export default function Sale() {
   return (
@@ -70,11 +71,7 @@ export default function Sale() {
             <div className={styles.li_inner_div}>
               <CustomInput />
             </div>
-            <span className='m-3'>Client Name</span>
-           
-            <div className={styles.li_inner_div}>
-              <CustomInput />
-            </div>
+          
           </div>
   
           <div className={styles.li_div_main}>
@@ -108,7 +105,15 @@ export default function Sale() {
               <CustomInput />
             </div>
           </div>
-       
+           
+           <div className={styles.li_div_main}>
+           <span className='m-3'>Client Name</span>
+           
+           <div className={styles.li_inner_div}>
+             <CustomInput />
+           </div>   
+           </div>
+
           <div className={styles.li_div_main}>
   
             <div 
@@ -129,7 +134,7 @@ export default function Sale() {
 
         </div>
   
-        <div className="flex w-full items-center justify-between space-x-6 p-6">
+        <div className="flex w-full  items-center justify-between space-x-6 p-6">
           <div className="flex-1 truncate">
             <Table
               th={th}
@@ -139,61 +144,66 @@ export default function Sale() {
         </div>
       </li>
   
-      <li className="col-span-1 divide-y rounded-lg" style={{ position: 'relative', top: 0, right: 0 }}>
+      <li className="col-span-1 divide-y rounded-lg ml-8" style={{ position: 'relative', top: 0, right: 0 }}>
         <div>
           
           <div className={styles.li_div_main}>
-            <div className={styles.li_inner_div}>
-              <IconButton
+            <div className={styles.li2_inner_div}>
+              <IconButton 
                 Icon={AiOutlineDelete}
                 title={'Clear Sale'}
+                size={iconSize}
               />
             </div>
-            <div className={styles.li_inner_div}>
+            <div className={styles.li2_inner_div}>
               <IconButton
               Icon={GiCancel}
               title={'Cancel Item'}
-
+              size={iconSize}
               />
             </div>
           </div>
   
           <div className={styles.li_div_main}>
-            <div className={styles.li_inner_div}>
+            <div className={styles.li2_inner_div}>
               <IconButton
                 Icon={AiOutlineReload}
                 title={'Return'}
+                size={iconSize}
               />
             </div>
-            <div className={styles.li_inner_div}>
+            <div className={styles.li2_inner_div}>
               <IconButton
                 Icon={AiOutlineEdit}
                 title={'Edit'}
+                size={iconSize}
               />
             </div>
           </div>
   
           <div className={styles.li_div_main}>
-            <div className={styles.li_inner_div}>
+            <div className={styles.li2_inner_div}>
                 <IconButton
                 Icon={AiOutlinePauseCircle}
                 title={'Hold'}
+                size={iconSize}
                  />
              </div>
-            <div className={styles.li_inner_div}>
+            <div className={styles.li2_inner_div}>
                <IconButton
                Icon={CiCircleRemove}
                title={'Cancellation'}
+               size={iconSize}
                />
            </div>
           </div>
           <div className={styles.li_div_main}>
     
-      <div className={styles.li_inner_div}>
+      <div className={styles.li2_inner_div}>
         <IconButton
-          
           Icon={BsSendCheck}
-                title={'pay'}
+          title={'pay'}
+          size={iconSize}
         />
       </div>
     </div>
@@ -293,6 +303,7 @@ const styles = {
   li:'col-span-2 divide-y rounded-lg',
   li_div_main:'-mt-px flex  divide-x m-4',
   li_inner_div:'flex w-0 flex-1 m-1',
+  li2_inner_div:'m-4',
   footer_row:'grid grid-rows-5 grid-flow-col gap-4',
   footer_col:'grid grid-cols-4 gap-4'
 }

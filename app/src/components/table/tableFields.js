@@ -16,7 +16,7 @@ const Td = ({value})=>(
   return (
     <>
         <table 
-         className="min-w-full divide-y divide-gray-300">
+           className="min-w-full divide-y overflow-y-auto h-60 bg-white">
                 <thead>
                   <tr className="divide-x divide-gray-200">
                    {
@@ -26,7 +26,7 @@ const Td = ({value})=>(
                         backgroundColor:primary_color 
                       }}
                       className="py-3.5 pl-4 pr-4 text-left text-sm  font-semibold sm:pl-0">
-                        <span className=' text-white m-4'>
+                        <span className='text-white m-4'>
                            {i} 
                         </span>
                     </th>    
