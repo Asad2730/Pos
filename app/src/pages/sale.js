@@ -1,11 +1,10 @@
 import React from 'react'
-import NavBar from '../components/navbar/navbar'
 import Table from '../components/table/table';
 import CustomInput from '../components/ui/input';
 import IconButton from '../components/ui/iconButton';
 import { AiOutlineDelete, AiOutlineEdit, AiOutlineReload, AiOutlinePauseCircle } from "react-icons/ai";
 import { CiCircleRemove } from "react-icons/ci";
-import { primary_color, secondary_color } from '../utils/colors';
+import {  secondary_color } from '../utils/colors';
 import { GiCancel } from "react-icons/gi";
 import { BsSendCheck } from "react-icons/bs";
 import CustomDropDown from '../components/ui/dropDown';
@@ -57,36 +56,50 @@ export default function Sale() {
               <img src={logo} className='w-60 h-16 ml-5' />
               <div className='flex flex-col mr-10 ml-4'>
                 <div className='flex flex-row my-2'>
-                <CustomInput />
-                <CustomInput />
+                <CustomInput
+                height={35}
+                 />
+                <CustomInput 
+                   height={35}
+                />
+                
                 </div>
                 <div className='flex flex-row '>
                   <span className='m-3'>Client Type</span>
                   <CustomDropDown />
                   <span className='m-3'>Client Name</span>
-                  <CustomInput />
+                  <CustomInput 
+                   height={35} />
                 </div> 
                 <div className='flex flex-row mt-2'>
                   <span className='m-3'>Code</span>
-                  <CustomInput />
+                  <CustomInput
+                  height={35}  />
 
                   <span className='m-3'>Name</span>
-                  <CustomInput />
+                  <CustomInput
+                     height={35} />
 
                   <span className='m-3'>Bonus</span>
-                  <CustomInput />
+                  <CustomInput 
+                     height={35} />
                   <span className='m-3'>Qty</span>
-                  <CustomInput />
+                  <CustomInput
+                    height={35}  />
 
                   <span className='m-3'>Disc%</span>
-                  <CustomInput />
+                  <CustomInput 
+                   height={35} />
 
                   <span className='m-3'>Up</span>
-                  <CustomInput />
+                  <CustomInput 
+                   height={35} />
                   
                 </div>
                 <div className='flex flex-row mt-2'>
-                <CustomInput />
+                <CustomInput 
+                   height={35}
+                />
                   <CustomInput type={'checkbox'}/>
                     <span className='ml-4 '>Check Price</span>
                     <span className='ml-4' />
@@ -161,7 +174,8 @@ export default function Sale() {
           <div className='flex flex-col w-1/5'>
             <div className='flex flex-row  items-center justify-center m-2'>
               <span className='text-white w-40'>No of item</span>
-              <CustomInput />
+              <CustomInput 
+               />
             </div>
             <div className='flex flex-row  items-center justify-center  m-2'>
               <span className='text-white w-40'> Total Qty </span>
@@ -226,14 +240,3 @@ export default function Sale() {
 
 
 
-
-const styles = {
-  ul: 'grid grid-cols-1 gap-6 m-4 sm:grid-cols-2 lg:grid-cols-3 ',
-  li: 'col-span-2 divide-y rounded-lg mt-8',
-  li_div_main: '-mt-px flex  divide-x   justify-end ',
-  li_div_main1: '-mt-px flex  divide-x',
-  li_inner_div: 'flex w-0 flex-1 ',
-  li2_inner_div: 'mt-4 mr-3',
-  footer_row: 'grid grid-rows-5 grid-flow-col gap-4',
-  footer_col: 'grid grid-cols-4 gap-4'
-}
