@@ -3,6 +3,7 @@ import CustomButton from "../components/ui/button";
 import CustomInput from "../components/ui/input";
 import CustomText from "../components/ui/text";
 import { useNavigate } from "react-router-dom";
+import { login } from "../DB/loginDb";
 
 
 export default function Login() {
@@ -13,11 +14,16 @@ export default function Login() {
    password:'',
   });
   
-  const submit = ()=>{
+  const submit = async()=>{
     const isFormValid = formValues.name !== '' && formValues.password !== '';
     if(isFormValid){
-      console.log(formValues.name,formValues.password);
-      navigate('/sale')
+       try{
+        const rows = await login(formValues.name,formValues.password);
+        console.log('rows',rows);
+        navigate('/sale')
+       }catch(error){
+        console.log(error)
+       }
     }
   }
 
