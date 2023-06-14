@@ -18,7 +18,7 @@ export default function Login() {
     const isFormValid = formValues.name !== '' && formValues.password !== '';
     if(isFormValid){
        try{
-        const rows = await login(formValues.name,formValues.password);
+         const rows = await login(formValues.name,formValues.password);
         console.log('rows',rows);
         navigate('/sale')
        }catch(error){
