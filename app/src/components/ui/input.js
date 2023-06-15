@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { handleChange } from "../../hooks/handleChange";
 
 export default function CustomInput({ placeholder, type, field, value, onChange, required, height }) {

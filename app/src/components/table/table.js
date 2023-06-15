@@ -1,3 +1,4 @@
+import React from 'react';
 import TableFields from "./tableFields";
 
   export default function Table({th,tr}) {
